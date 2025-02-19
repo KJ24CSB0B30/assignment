@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <style>
+        body {
+            background-color: lavender;
+            
+        }
+        div {
+width:50%;
+margin:auto;
+            background-color: white;
+padding:20px;
+        }
+        button {
+            background-color: #e0ffff;
+        }
+        button:hover {
+            background-color: #add8e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="movieInput" placeholder="Enter a movie name" ><br><br>
+        <button onclick="addMovie()" style="display:block; padding:10px; " ><b>Add Movie</button><br><br>
+        <button onclick="clearList() "style="display:block; padding:10px;"><b>Clear List</button>
+        <ul id="movieList"></ul>
+
+    </div>
+
+    <script>
+        var movies = [];
+
+        function addMovie() {
+            var movieName = document.getElementById('movieInput').value;
+            if (movieName) {
+                movies.push(movieName);
+                document.getElementById('movieInput').value = '';
+                displayMovies();
+            }
+        }
+
+        function clearList() {
+            movies = [];
+            displayMovies();
+        }
+
+        function displayMovies() {
+           
+            var movieList = document.getElementById('movieList');
+            movieList.innerHTML = '';
+            for (var i = 0; i < movies.length; i++) {
+                var li = document.createElement('li');
+                li.textContent = movies[i];
+                movieList.appendChild(li);
+             
+                
+            }
+         func();
+        }
+
+        
+    </script>
+</body>
+</html>
