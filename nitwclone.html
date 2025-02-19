@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIT Warangal Institute</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #111;
+        }
+        .left {
+            float: left;
+            margin: 10px;
+        }
+        h1 {
+            color: black;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .announcement {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .announcement span {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .slider {
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+                  }
+        .slides {
+            display: flex;
+            width:80%;
+            animation: slide 10s infinite;
+        }
+        .slides img {
+            width: 100%;
+                    }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+              </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://th.bing.com/th/id/OIP.33cagNAv_MLLYMdX2kRWGgAAAA?w=145&h=150&c=7&r=0&o=5&pid=1.7" alt="logo" style="width:10%;" class="left">
+        <h1 class="left">National Institute of Technology Warangal</h1>
+    </div>
+    <div class="announcement">
+        <span>New Announcement: Admissions are open for the 2025-2026 academic year!</span>
+    </div>
+    <ul>
+        <li><a href="#">Institute</a></li>
+        <li><a href="#">Administration</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Alumni</a></li>
+    </ul>
+    
+    <div class="slider">
+        <div class="slides">
+            <img src="https://nitw.ac.in/api/static/files/welcome_to_NIT_WARANGAL_2023-4-15-16-35-49.jpg"  alt="Image 1">
+            <img src="https://nitw.ac.in/api/static/files/Workshop_on_NEP_Implementation_in_HEIs_and_Way_Forward_-V2_2025-2-4-15-0-24.jpg" alt="Image 2">
+            <img src="https://nitw.ac.in/api/static/files/Book_Fair_-_2025_2025-2-6-9-58-10.jpg" alt="Image 3">
+        </div>
+    </div>
+    
+    <div class="announcement" style=" animation:scroll 50s infinte; border: 10 px solid #333;" >
+             <span> NEWS:Notice-The selection list of applied candidates will be released on 05/12/2025</span>    </div>
+
+            <h2 >Campus Life</h2>
+<div style="background-color:lavender;">
+        
+            <img src="https://collagedesign.com/wp-content/uploads/2024/03/2-11.jpg" alt="Campus Life Image 1" style="width:50%; height:385px; float:left;">
+            <img src="https://media.collegedekho.com/media/uploads/2023/10/18/nit-warangal-library.jpg" alt="Campus Life Image 2"  style="width:50%; ">
+            <img src="https://nitw.ac.in/api/static/files/Bio-Technology_2023-9-25-19-48-35.jpg" alt="Campus Life Image 3" style="width:50%; float:left;">
+            <img src="https://noticedash.com/wp-content/uploads/2022/11/admin_image_2022-7-13-23-32-52-scaled.jpg" alt="Campus Life Image 4"  style="width:50%; float:left;"></div>
+<p style="display:inline; font-size:80px; font-family:cursive"><b> Thank you! </p> 
+     </body>
+</html>
