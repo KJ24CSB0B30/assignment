@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel spot</title><style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="City Logo">
+        </div>
+        <h1>Travel spot-Hyderabad</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+
+            <li><a href="heritage.html">Heritage</a></li>
+            <li><a href="hotelbooking.html">Hotel Booking</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <section class="gallery" >
+        <h2 id="gallery">Pictures of Heritage Sites</h2>
+        <div class="image-grid">
+            <img src="site1_photo.jpg" alt="Site 1">
+            <img src="site2_photo.jpg" alt="Site 2">
+            <img src="site3_photo.jpg" alt="Site 3">
+            <img src="site4_photo.jpg" alt="Site 4">
+ <img src="site_photo.jpg" alt="Site 5">
+
+                    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 City Tourism. All rights reserved.</p>
+    </footer>
+</body>
+</html>
