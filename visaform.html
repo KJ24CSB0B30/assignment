@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #00bbff, #acb6e5);
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: inline-block;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        label, input, select, button {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+            width: 100%;
+            text-align: left;
+        }
+        input, select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007acc;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005f99;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visa Application Form</h1>
+    <form id="visaForm" onsubmit="validateForm(event)">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+        
+        <label for="passport">Passport Number:</label>
+        <input type="text" id="passport" placeholder="Enter your passport number">
+        
+        <label for="country">Select your country:</label>
+        <select id="country">
+            <option value="">--Select a country--</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+        </select>
+        
+        <button type="submit">Apply for Visa</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+            
+            const name = document.getElementById("name").value.trim();
+            const passport = document.getElementById("passport").value.trim();
+            const country = document.getElementById("country").value;
+            const message = document.getElementById("message");
+            
+            if (!name || !passport || !country) {
+                message.textContent = "All fields are required!";
+                message.style.color = "#d9534f";
+                return;
+            }
+
+            if (passport.length < 8 || passport.length > 10) {
+                message.textContent = "Invalid passport number!";
+                message.style.color = "#d9534f";
+                return;
+            }
+
+            message.textContent = "Visa application submitted successfully!";
+            message.style.color = "black";
+        }
+    </script>
+</body>
+</html>

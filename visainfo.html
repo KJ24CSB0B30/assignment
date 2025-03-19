@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(135deg, #e92727, #0800ff);
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        label, select, button {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007acc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005f99;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+            background: linear-gradient(135deg, #e92727, #0800ff);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visa Checker</h1>
+    <label for="country">Select your country:</label>
+    <select id="country">
+        <option value="">--Select a country--</option>
+        <option value="U">USA</option>
+        <option value="C">Canada</option>
+        <option value="I">India</option>
+        <option value="UK">UK</option>
+        <option value="AUS">Australia</option>
+    </select>
+    <br>
+    <button onclick="checkVisa()">Check Visa</button>
+    <div id="result"></div>
+
+    <script>
+        function checkVisa() {
+            const country = document.getElementById("country").value;
+            const result = document.getElementById("result");
+
+            if (country === "U") {
+                result.textContent = "Visa required for most applicants.";
+            } else if (country === "C") {
+                result.textContent = "Visa required unless you have an eTA.";
+            } else if (country === "I") {
+                result.textContent = "Visa required before travel.";
+            } else if (country === "UK") {
+                result.textContent = "Visa depends on the duration of stay.";
+            } else if (country === "AUS") {
+                result.textContent = "eVisa available for eligible travelers.";
+            } else {
+                result.textContent = "Please select a country.";
+            }
+        }
+    </script>
+</body>
+</html>
